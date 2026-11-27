@@ -1,0 +1,15 @@
+services:
+  school-mcp:
+    build: .
+    container_name: comcigan-neis-mcp
+    restart: unless-stopped
+    ports:
+      - "${PORT:-3000}:3000"
+    environment:
+      PORT: "3000"
+      HOST: "0.0.0.0"
+      DEFAULT_SCHOOL: "${DEFAULT_SCHOOL:-}"
+      DEFAULT_GRADE: "${DEFAULT_GRADE:-}"
+      DEFAULT_CLASS: "${DEFAULT_CLASS:-}"
+      NEIS_API_KEY: "${NEIS_API_KEY:-}"
+      MCP_AUTH_TOKEN: "${MCP_AUTH_TOKEN:-}"

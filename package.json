@@ -1,0 +1,35 @@
+{
+  "name": "comcigan-neis-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for Korean school timetables (Comcigan) and academic schedules (NEIS Open API)",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "start:http": "node dist/http.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "comcigan",
+    "neis",
+    "timetable",
+    "korea"
+  ],
+  "author": "",
+  "license": "MIT",
+  "type": "commonjs",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "cheerio": "^1.2.0",
+    "crypto-js": "^4.2.0",
+    "iconv-lite": "^0.7.3",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/crypto-js": "^4.2.2",
+    "@types/node": "^26.6.11",
+    "typescript": "^7.0.2"
+  }
+}
