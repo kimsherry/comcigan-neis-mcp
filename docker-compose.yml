@@ -13,3 +13,13 @@ services:
       DEFAULT_CLASS: "${DEFAULT_CLASS:-}"
       NEIS_API_KEY: "${NEIS_API_KEY:-}"
       MCP_AUTH_TOKEN: "${MCP_AUTH_TOKEN:-}"
+      MCP_PATH: "${MCP_PATH:-/mcp}"
+      MCP_CORS_ORIGIN: "${MCP_CORS_ORIGIN:-}"
+      RATE_LIMIT_MAX: "${RATE_LIMIT_MAX:-60}"
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    read_only: true
+    tmpfs:
+      - /tmp

@@ -7,7 +7,9 @@ RUN npm ci
 
 COPY tsconfig.json ./
 COPY src ./src
-RUN npm run build
+RUN npm run build && npm prune --omit=dev && chown -R node:node /app
+
+USER node
 
 EXPOSE 3000
 

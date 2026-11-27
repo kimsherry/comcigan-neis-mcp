@@ -35,6 +35,9 @@ npm run build
 | `PORT` | HTTP 모드 실행 시 포트 | `3000` |
 | `HOST` | HTTP 모드 바인딩 주소 | `0.0.0.0` |
 | `MCP_AUTH_TOKEN` | HTTP 모드 Bearer 인증 토큰 (외부 공개 시 설정 권장) | - |
+| `MCP_PATH` | 커스텀 엔드포인트 비밀 경로 (예: `/mcp/secret-key`) | `/mcp` |
+| `MCP_CORS_ORIGIN` | CORS 허용 출처 (미설정 시 교차 출처 차단) | - |
+| `RATE_LIMIT_MAX` | IP당 분당 최대 요청 횟수 | `60` |
 
 ---
 
